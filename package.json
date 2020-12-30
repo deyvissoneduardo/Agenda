@@ -15,6 +15,7 @@
   "author": "Deyvisson Eduardo",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "connect-mongo": "^3.2.0",
     "core-js": "^3.6.5",
@@ -27,7 +28,8 @@
     "helmet": "^3.23.3",
     "mongoose": "^5.9.21",
     "regenerator-runtime": "^0.13.5",
-    "style-loader": "^1.2.1"
+    "style-loader": "^1.2.1",
+    "validator": "^13.5.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
