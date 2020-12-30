@@ -1,0 +1,55 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3">
+      <h1 class="text-center">Criar conta ou Entrar</h1>
+      <p class="text-center lead">.:Faça o Login ou crie sua conta:.</p>
+      <%- include('includes/messages') %>
+      
+      <div class="row">
+
+        <div class="col-lg">
+          <h4>.:Faça seu Cadastro:.</h4>
+          <p>Preencha o formulario para criar sua conta!</p>
+          <form action="/login/register" method="POST">
+            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+            <div class="form-group my-2">
+              <label for="emial">E-mail</label>
+              <input type="email" class="form-control my-2" name="email" aria-describedby="emailHelp"
+                placeholder="email@gmail.com">
+            </div> 
+            <div class="form-group my-2">
+              <label for="password">Senha</label>
+              <input type="password" class="form-control my-2" name="password" placeholder="senha">
+            </div>
+            <button type="submit" class="btn btn-primary my-3">Criar Conta</button>
+          </form>
+        </div>
+
+        <div class="col-lg">
+          <h4>.:Ver Agenda:.</h4>
+          <p>Acesse sua Agenda!</p>
+          <form action="/login/login" method="POST">
+            <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+            <div class="form-group my-2">
+              <label for="emial">E-mail</label>
+              <input type="email" class="form-control my-2" name="email" aria-describedby="emailHelp"
+                placeholder="email@gmail.com">
+            </div>
+            <div class="form-group my-2">
+              <label for="password">Senha</label>
+              <input type="password" class="form-control my-2" name="password" placeholder="senha">
+            </div>
+            <button type="submit" class="btn btn-primary my-3">Logar</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+  <%- include('includes/footer') %>
